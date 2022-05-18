@@ -1,0 +1,63 @@
+// import the required theme file with the correct color variables that are used in the baseTheme file
+@import '../themes/_baseTheme.scss';
+// Colors
+$white: #ffffff;
+// icon sizes
+$icon-xs: 0.5rem;
+$icon-s: 1rem;
+$icon-m: 1.5rem;
+$icon-l: 2rem;
+$icon-xl: 2.5rem;
+$icon-xxl: 3.5rem;
+
+// Font sizes
+$content-size-xs: 0.6rem;
+$content-size-s: 0.8rem;
+$content-size-m: 1rem;
+$content-size-l: 1.2rem;
+$content-size-xl: 1.4rem;
+$title-size-xs: 1rem;
+$title-size-s: 1.2rem;
+$title-size-m: 1.4rem;
+$title-size-l: 1.6rem;
+$title-size-xl: 2rem;
+$title-size-2xl: 2.5rem;
+$title-size-3xl: 3rem;
+
+// Spacings
+$spacing-xs: 0.25rem;
+$spacing-s: 0.5rem;
+$spacing-m: 1rem;
+$spacing-l: 1.5rem;
+$spacing-xl: 2rem;
+$spacing-xxl: 3rem;
+
+// Break points
+$breakpoint-phone: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1366px;
+$breakpoint-LargeDesktop: 1920px;
+
+// Mixins
+@mixin respond($breakpoint) {
+  @if ($breakpoint == 'extraLarge') {
+    @media (min-width: $breakpoint-desktop) and (max-width: $breakpoint-LargeDesktop) {
+      @content;
+    }
+  }
+  @if ($breakpoint == 'large') {
+    @media (min-width: $breakpoint-tablet) and (max-width: $breakpoint-desktop) {
+      @content;
+    }
+  }
+  @if ($breakpoint == 'medium') {
+    @media (min-width: $breakpoint-phone) and (max-width: $breakpoint-tablet) {
+      @content;
+    }
+  }
+  @if ($breakpoint == 'small') {
+    @media (max-width: $breakpoint-phone) {
+      @content;
+    }
+  }
+}

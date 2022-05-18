@@ -1,7 +1,11 @@
-import '@styles/globals.css'
+import Header from '../components/header/header'
+import '../styles/globals.css'
 
-function Application({ Component, pageProps }) {
-  return <Component {...pageProps} />
+function MyApp({ Component, pageProps }) {
+  return <div>
+       <Header />
+       <Component {...pageProps} />
+    </div>
 }
 
-export default Application
+export default MyApp

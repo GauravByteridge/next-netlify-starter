@@ -1,0 +1,52 @@
+.footer{
+    position: relative;
+    .download{
+        background: rgba(75, 199, 182, 0.6);
+        padding: 6rem 2rem 1rem 8rem ;
+        color: rgba(255, 255, 255, 1);
+       
+        .header{
+            font-weight: 800;
+            font-size: 36px;
+        }
+        .comment{
+            padding-right: 1rem;
+            padding-top: 1rem;
+            width: 50%;
+            line-height: 28px;
+        }
+        .link{
+            width: 480px;
+            margin: 20px 14px;
+            a{
+                margin: 8px;
+            }
+        }
+    }
+    .bottom{
+        background-color: #000;
+        color: #D1D5DB;
+        padding: 1.5rem 4rem;
+        display: flex;
+        align-items: center;
+    
+        .copyright{
+            font-size: 14px;
+            line-height: 20px;
+            font-weight: 400;
+            
+        }
+        .socials{
+            margin: 0 10rem;
+            a{
+                margin: 0 1rem;
+            }
+        }
+        .mobile{
+            position: absolute;
+            right: 10%;
+            bottom: 0px;
+        }
+    }
+   
+}

@@ -1,0 +1,59 @@
+.features {
+    .header {
+        text-align: center;
+        font-weight: 800;
+        font-size: 36px;
+        line-height: 43.88px;
+
+        .highlight {
+            color: #4BC7B6;
+        }
+
+
+    }
+
+    .feature {
+        display: flex;
+        align-items: center;
+        margin: 14px 24px;
+        padding: 14px 24px;
+
+        .container {
+            width: 50%;
+           
+
+            
+
+        }
+
+        .about {
+            width: 50%;
+            padding: 18px;
+            .subHeader {
+                word-spacing: 4px;
+                font-weight: 700;
+                font-size: 48px;
+            
+                .arreOrange{
+                    margin-right: 8px ;
+                }
+            }
+            .content{
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 22px;
+                margin: 14px 0px;
+                color: #151439;
+                opacity: 0.5;
+            }
+        }
+    }
+
+    .arreOrange {
+        color: #EE8C34;
+    }
+
+    .arreGreen {
+        color: #4BC7B6;
+    }
+}
