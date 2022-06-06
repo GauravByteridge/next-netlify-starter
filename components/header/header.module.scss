@@ -6,6 +6,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 14px;
+    width: 100%;
+
 
     .logo {
         cursor: pointer;
@@ -15,7 +17,9 @@
 
     .navigation {
         padding: 0 14px;
-
+        .mobile {
+            display: none;
+        }
         a {
             margin: 0 10px;
             cursor: pointer;
@@ -25,10 +29,119 @@
         .active {
             color: #4BC7B6;
         }
-        .inActive{
-            color:  rgba(75, 199, 182, 0.5);
+
+        .inActive {
+            color: rgba(75, 199, 182, 0.5);
         }
 
 
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .header {
+        background-color: $white;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px;
+        box-sizing: border-box;
+        position: relative;
+        width: 100%;
+        margin-bottom: 24px;
+        background: #ffffff;
+
+
+
+        .logo {
+            cursor: pointer;
+            margin: 8px 12px;
+            padding: 0 16px;
+        }
+
+        .navigation {
+            padding: 0;
+
+            .mobile {
+                display: block;
+
+                .menuIcon {
+                    font-size: 30px;
+                    animation: transitionIn 0.2s;
+                }
+
+            }
+
+            .desktop {
+                display: none;
+            }
+
+
+
+
+        }
+
+        .mobileMenu {
+            position: absolute;
+            top: 100px;
+            left: 0;
+            width: 100vw;
+            z-index: 900;
+            opacity: 0.97;
+            overflow: hidden;
+            animation: topDown 0.2s;
+            font-size: 24px;
+            box-sizing: border-box;
+            background: #ffffff;
+            height: 100vh;
+
+            a {
+                margin: 0 10px;
+                cursor: pointer;
+                font-weight: 700;
+            }
+
+            .active {
+                color: #4BC7B6;
+            }
+
+            .inActive {
+                color: rgba(0, 0, 0, 0.5)
+            }
+
+
+        }
+    }
+
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        font-size: 0px;
+
+
+
+    }
+
+    to {
+        opacity: 1;
+        font-size: 30px;
+    }
+}
+
+@keyframes topDown {
+    from {
+        opacity: 0;
+        top: 0px;
+        height: 0%;
+
+
+    }
+
+    to {
+        opacity: 1;
+        top: 100px;
+        height: 100%;
     }
 }

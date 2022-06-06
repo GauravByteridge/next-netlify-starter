@@ -31,8 +31,7 @@ export default function Features() {
                 <div className={styles.container} >
                     <Lottie
                         options={{ ...defaultOptions, animationData: voicepodLottie }}
-                        height={400}
-                        width={700}
+                    
 
                     />
                 </div>
@@ -54,8 +53,7 @@ export default function Features() {
                 <div className={styles.container} >
                     <Lottie
                         options={{ ...defaultOptions, animationData: categoryLottie }}
-                        height={500}
-                        width={600}
+                        
 
                     />
                 </div>
@@ -77,8 +75,7 @@ export default function Features() {
                 <div className={styles.container} >
                     <Lottie
                         options={{ ...defaultOptions, animationData: jampodLottie }}
-                        height={400}
-                        width={700}
+                      
 
                     />
                 </div>
@@ -99,8 +96,7 @@ export default function Features() {
                 <div className={styles.container} >
                     <Lottie
                         options={{ ...defaultOptions, animationData: podrollLottie }}
-                        height={400}
-                        width={700}
+                      
 
                     />
                 </div>

@@ -1,52 +1,157 @@
-.footer{
+.footer {
     position: relative;
-    .download{
+
+    .download {
         background: rgba(75, 199, 182, 0.6);
-        padding: 6rem 2rem 1rem 8rem ;
+        padding: 6rem 2rem 1rem 8rem;
         color: rgba(255, 255, 255, 1);
-       
-        .header{
+
+        .header {
             font-weight: 800;
             font-size: 36px;
         }
-        .comment{
+
+        .comment {
             padding-right: 1rem;
             padding-top: 1rem;
             width: 50%;
             line-height: 28px;
         }
-        .link{
+
+        .link {
             width: 480px;
             margin: 20px 14px;
-            a{
+
+            img {
+                width: 160px;
+                height: 50px;
+            }
+
+            a {
                 margin: 8px;
             }
         }
     }
-    .bottom{
+    .mobile {
+      display: none;
+    }
+
+    .bottom {
         background-color: #000;
         color: #D1D5DB;
         padding: 1.5rem 4rem;
         display: flex;
         align-items: center;
-    
-        .copyright{
+
+        .copyright {
             font-size: 14px;
             line-height: 20px;
             font-weight: 400;
-            
+
         }
-        .socials{
+
+        .socials {
             margin: 0 10rem;
-            a{
+
+            a {
                 margin: 0 1rem;
             }
         }
-        .mobile{
+
+        .mobile {
             position: absolute;
             right: 10%;
             bottom: 0px;
+            display: block;
+
+            img {
+                width: 380px;
+                height: 300px;
+            }
         }
     }
-   
+
+}
+
+@media only screen and (max-width: 980px) {
+    .footer {
+        position: relative;
+
+        .download {
+            background: rgba(75, 199, 182, 0.6);
+            padding: 1.5rem;
+            color: rgba(255, 255, 255, 1);
+
+
+            .header {
+                font-weight: 800;
+                font-size: 24px;
+
+            }
+
+            .comment {
+                padding-right: 0rem;
+                padding-top: 1rem;
+                width: 100%;
+                line-height: 28px;
+
+            }
+
+            .link {
+                width: 280px;
+                margin: 20px 0px;
+                text-align: center;
+
+                img {
+                    width: 120px;
+                    height: 50px;
+                }
+
+                a {
+                    margin: 8px 4px;
+                }
+            }
+        }
+
+        .mobile {
+            background: rgba(75, 199, 182, 0.6);
+            display: block;
+
+            img {
+                width: 380px;
+                height: 300px;
+            }
+        }
+
+        .bottom {
+            background-color: #000;
+            color: #D1D5DB;
+            padding: 1.5rem 4px;
+            display: flex;
+            align-items: center;
+
+            .copyright {
+                font-size: 12px;
+                line-height: 1rem;
+                font-weight: 400;
+
+            }
+
+            .socials {
+                margin: 0 1rem;
+
+                a {
+                    margin: 0 4px;
+                }
+            }
+
+            .mobile {
+                position: absolute;
+                right: 0%;
+                bottom: 0px;
+                display: none;
+            }
+        }
+
+    }
 }

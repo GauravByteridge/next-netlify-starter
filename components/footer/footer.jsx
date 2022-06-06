@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Image from 'next/image'
 import React from 'react'
 import styles from "./footer.module.scss"
@@ -24,16 +25,18 @@ export default function Footer() {
                 </div>
                 <div className={styles.link}>
                     <a href='https://play.google.com/store/apps/details?id=com.arre.voice'>
-                        <Image alt="arre-voice-logo" width={160}
-                            height={50} src={appStoreLogo}></Image>
+                        <img alt="arre-voice-logo" 
+                         src={appStoreLogo}></img>
                     </a>
                     <a href='https://play.google.com/store/apps/details?id=com.arre.voice'>
-                        <Image alt="arre-voice-logo" width={160}
-                            height={50} src={playStoreLogo}></Image>
+                        <img alt="arre-voice-logo"  src={playStoreLogo}></img>
                     </a>
                 </div>
 
             </div>
+            <div className={styles.mobile}>
+                    <img alt="arre-voice-logo" layout='fill' src={footerMobileImage}></img>
+                </div>
             <div className={styles.bottom}>
                 <div className={styles.copyright}>
                     © 2021 Arré Voice. All rights reserved
@@ -57,11 +60,10 @@ export default function Footer() {
                     </a>
                 </div>
                 <div className={styles.mobile}>
-                <Image alt="arre-voice-logo" width={380}
-                    height={300} src={footerMobileImage}></Image>
+                    <img alt="arre-voice-logo" layout='fill' src={footerMobileImage}></img>
+                </div>
             </div>
-            </div>
-            
+
 
         </div>
     )

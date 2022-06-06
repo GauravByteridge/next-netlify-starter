@@ -15,30 +15,29 @@
     .feature {
         display: flex;
         align-items: center;
-        margin: 14px 24px;
-        padding: 14px 24px;
+        margin: 14px 0px;
+        padding: 14px 0px;
 
         .container {
             width: 50%;
-           
-
-            
 
         }
 
         .about {
             width: 50%;
             padding: 18px;
+
             .subHeader {
                 word-spacing: 4px;
                 font-weight: 700;
                 font-size: 48px;
-            
-                .arreOrange{
-                    margin-right: 8px ;
+
+                .arreOrange {
+                    margin-right: 8px;
                 }
             }
-            .content{
+
+            .content {
                 font-size: 16px;
                 font-weight: 500;
                 line-height: 22px;
@@ -55,5 +54,87 @@
 
     .arreGreen {
         color: #4BC7B6;
+    }
+}
+
+
+@media only screen and (max-width: 1020px) {
+    .features {
+        margin: 14px 0px;
+        .header {
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 36px;
+        }
+
+        .feature {
+            margin: 0px;
+            padding: 0px;
+
+            .container {
+                width: 50%;
+            }
+
+            .about {
+                width: 50%;
+                padding: 16px;
+
+                .subHeader {
+                    word-spacing: 4px;
+                    font-weight: 700;
+                    font-size: 40px;
+                }
+
+                .content {
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 20px;
+                    margin: 14px 0px;
+                    color: #151439;
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    .features {
+        .header {
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 36px;
+        }
+
+        .feature {
+            margin: 0px;
+            padding: 0px;
+            display: block;
+
+            .container {
+                width: 100%;
+            }
+
+            .about {
+                width: 100%;
+                padding: 0px 24px;
+                text-align: center;
+
+                .subHeader {
+                    word-spacing: 4px;
+                    font-weight: 700;
+                    font-size: 40px;
+                }
+
+                .content {
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 20px;
+                    margin: 14px 0px;
+                    color: #151439;
+                    opacity: 0.5;
+                }
+            }
+        }
     }
 }
