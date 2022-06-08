@@ -12,14 +12,18 @@ export default function Initial({ setVideoIntroShown }) {
     const [isLastSeen, setIsLastSeen] = useState(false);
     const [showVideo, setshowVideo] = useState(false);
     const [isVideoShown, setIsVideoShown] = useState(false)
+    const [imageLoaded, setImageLoaded] = useState(false)
 
     const videoRef = useRef();
+    const imageRef = useRef();
+
     const observer = useRef();
     const lastVideoElementRef = useCallback(
         (node) => {
             if (observer.current) observer.current.disconnect();
             observer.current = new IntersectionObserver((entries) => {
-                if (entries[0].isIntersecting) {
+
+                if (imageRef.current.complete && entries[0].isIntersecting) {
                     setIsLastSeen(true)
                 }
             });
@@ -57,7 +61,7 @@ export default function Initial({ setVideoIntroShown }) {
             <div className={`${styles.header} `}>
                 <span className={`${isLastSeen && styles.topDown}`}>Get your journey started</span>
             </div>
-            <img className={`${isLastSeen && styles.fadeOut}`} src={homeScreenImage}></img>
+            <img ref={imageRef} className={`${isLastSeen && styles.fadeOut}`} src={homeScreenImage}  ></img>
             <div className={`${styles.download} ${isLastSeen && styles.bottomUp}`}>
                 <a target="_blank" rel='noreferrer' href='https://play.google.com/store/apps/details?id=com.arre.voice'><button >Download</button></a>
             </div>
