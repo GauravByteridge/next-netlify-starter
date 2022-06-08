@@ -47,11 +47,11 @@ export default function Introduction() {
           Download the app:
         </div>
         <div className={styles.link}>
-          <a href='https://play.google.com/store/apps/details?id=com.arre.voice'>
+          <a target="_blank" rel='noreferrer' href='https://play.google.com/store/apps/details?id=com.arre.voice'>
             <Image alt="arre-voice-logo" width={160}
               height={50} src={appStoreLogo}></Image>
           </a>
-          <a href='https://play.google.com/store/apps/details?id=com.arre.voice'>
+          <a target="_blank" rel='noreferrer'  href='https://play.google.com/store/apps/details?id=com.arre.voice'>
             <Image alt="arre-voice-logo" width={160}
               height={50} src={playStoreLogo}></Image>
           </a>

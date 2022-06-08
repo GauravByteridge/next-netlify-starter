@@ -7,7 +7,7 @@ import styles from "./initial.module.scss"
 const homeScreenImage = "/assets/image/introuction-image.png";
 const mouseScrollImage = "/assets/image/mouse-scroll.png";
 
-export default function Initial({setVideoIntroShown}) {
+export default function Initial({ setVideoIntroShown }) {
 
     const [isLastSeen, setIsLastSeen] = useState(false);
     const [showVideo, setshowVideo] = useState(false);
@@ -40,9 +40,9 @@ export default function Initial({setVideoIntroShown}) {
 
             setTimeout(() => {
                 setVideoIntroShown(true);
-            }, 17500)
+            }, 17900)
         }
-        
+
     }, [isLastSeen])
 
 
@@ -55,7 +55,7 @@ export default function Initial({setVideoIntroShown}) {
             </div>
             <img className={`${isLastSeen && styles.fadeOut}`} src={homeScreenImage}></img>
             <div className={`${styles.download} ${isLastSeen && styles.bottomUp}`}>
-                <button >Download</button>
+                <a target="_blank" rel='noreferrer' href='https://play.google.com/store/apps/details?id=com.arre.voice'><button >Download</button></a>
             </div>
             {/* <div className={styles.mouseScroll} >
             <img src={mouseScrollImage}></img>
