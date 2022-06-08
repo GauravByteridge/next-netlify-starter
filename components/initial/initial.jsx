@@ -34,16 +34,20 @@ export default function Initial({ setVideoIntroShown }) {
                 setshowVideo(true);
             }, 4000)
 
-            setTimeout(() => {
-                setIsVideoShown(true);
-            }, 15000)
 
-            setTimeout(() => {
-                setVideoIntroShown(true);
-            }, 18500)
         }
 
     }, [isLastSeen])
+
+    const handleVideoEnd = () => {
+
+        setIsVideoShown(true);
+
+
+        setTimeout(() => {
+            setVideoIntroShown(true);
+        }, 2500)
+    }
 
 
 
@@ -61,7 +65,7 @@ export default function Initial({ setVideoIntroShown }) {
             <img src={mouseScrollImage}></img>
             </div> */}
             <div id="sentinel" ref={lastVideoElementRef}></div>
-            {showVideo && <video className={`${styles.video} ${isVideoShown && styles.fadeOutVideo}`} autoPlay={true} ref={videoRef} muted={true}>
+            {showVideo && <video className={`${styles.video} ${isVideoShown && styles.fadeOutVideo}`} autoPlay={true} ref={videoRef} muted={true} onEnded={handleVideoEnd}>
                 <source src="/assets/videos/arre-logo.mp4" type="video/mp4" />
 
                 Your browser does not support the video tag.
