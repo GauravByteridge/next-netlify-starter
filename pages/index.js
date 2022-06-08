@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { useState } from 'react'
 import Features from '../components/features/features'
 import Footer from '../components/footer/footer'
-import Initial from '../components/initial/initial'
+import Initial from '../components/intial/initial'
 
 import Introduction from '../components/Introduction/introduction'
 import styles from '../styles/Home.module.css'
@@ -21,10 +21,10 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        {!videoIntroShown ? <Initial setVideoIntroShown={setVideoIntroShown} />
-        :<div><Introduction />
-        <Features />
-        <Footer /></div> }
+        {!videoIntroShown &&<Initial setVideoIntroShown={setVideoIntroShown} />}
+        {videoIntroShown && <div><Introduction />
+          <Features />
+          <Footer /></div>}
       </main>
 
 
