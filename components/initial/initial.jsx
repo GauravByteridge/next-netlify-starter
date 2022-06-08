@@ -40,7 +40,7 @@ export default function Initial({ setVideoIntroShown }) {
 
             setTimeout(() => {
                 setVideoIntroShown(true);
-            }, 17900)
+            }, 18500)
         }
 
     }, [isLastSeen])
