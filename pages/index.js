@@ -1,11 +1,16 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { useState } from 'react'
 import Features from '../components/features/features'
 import Footer from '../components/footer/footer'
+import Initial from '../components/intial/initial'
+
 import Introduction from '../components/Introduction/introduction'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+
+  const [videoIntroShown, setVideoIntroShown] = useState(false)
   return (
     <div className={styles.container}>
       <Head>
@@ -16,10 +21,10 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-
-        <Introduction />
+        {!videoIntroShown ? <Initial setVideoIntroShown={setVideoIntroShown} />
+        :<div><Introduction />
         <Features />
-        <Footer />
+        <Footer /></div> }
       </main>
 
 
