@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import Image from 'next/image';
 import Lottie from 'react-lottie'
 import menuLottie from '../../animations/menu.json';
+import image1 from "../../public/assets/image/arre-voice-logo.png"
 
 
 const arreVoiceLogoUrl = "/assets/image/arre-voice-logo.png";

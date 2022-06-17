@@ -3,6 +3,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 import styles from "./initial.module.scss"
+import videoURL from "../../public/assets/videos/arre-logo.mp4"
 
 const homeScreenImage = "/assets/image/introuction-image.png";
 const mouseScrollImage = "/assets/image/mouse-scroll.png";
